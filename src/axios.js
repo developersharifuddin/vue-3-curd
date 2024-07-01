@@ -3,18 +3,18 @@ import router from './router' // Ensure you import your router
 
 const axiosClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
-  timeout: 1500,
+  timeout: 5000,
   headers: {
     'Content-Type': 'application/json'
   }
 })
 
-// Add a request interceptor to include Authorization header if token is available
+// Add a request interceptor
 axiosClient.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token')
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`
+      config.headers['Authorization'] = `Bearer ${token}`
     }
     return config
   },

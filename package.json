@@ -13,6 +13,9 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
@@ -21,8 +24,8 @@
     "pinia": "^2.1.7",
     "sweetalert2": "^11.12.1",
     "toastr": "^2.1.4",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
