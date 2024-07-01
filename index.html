@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta
+      name="authorization"
+      content="Bearer {{ \Illuminate\Support\Facades\Session::get('token') }}"
+    />
+    <meta name="api_url" content="{{ env(API_URL) }}" />
+    <meta name="app-url" content="{{ url('/') }}" />
+    <meta name="api_path" content="{{ config('app.API_URL') }}" />
+
+    <link rel="stylesheet" href="/src/assets/dist/bootstrap5.3.1-bootstrap.min.css" />
+
+    <meta name="file-base-url" content="{{ url('/') }}/" />
+
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue | Inventory</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/assets/dist/axios.min.js"></script>
+    <!-- <script type="module" src="/src/assets/dist/bootstrap5.2.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
